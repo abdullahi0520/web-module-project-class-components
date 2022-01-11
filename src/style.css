@@ -10,3 +10,7 @@ html, body, #root {
 label {
     display:block;
 }
+.item.complete {
+    text-decoration: line-through;
+    border:2px solid salmon;
+}

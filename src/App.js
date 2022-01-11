@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDom from 'react-dom'
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
@@ -23,9 +24,9 @@ class App extends React.Component {
     super();
     this.state = {
       toDoList: toDoList
-    }
+    };
   }
-  handleClearCompleted () {
+  handleClearCompleted= ()=> {
     const newToDo = this.state.toDoList.filter(item => {
       return item.completed === false;
     })
@@ -46,7 +47,9 @@ class App extends React.Component {
     })
   }
 
-  handleToggledItem (selectedTask) {
+  handleToggledItem = (selectedTask)=> {
+    
+    
     this.setState({
       ...this.state,
       toDoList: this.state.toDoList.map(item => {
